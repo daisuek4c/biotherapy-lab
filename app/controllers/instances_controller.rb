@@ -3,7 +3,9 @@ class InstancesController < ApplicationController
   def index
     @db_instances = DbInstance.describe
 
-puts @db_instances.to_s
+    @db_instances.each do |db_instance|
+puts db_instance.inspect 
+    end
   end
 
   def show
