@@ -1,0 +1,19 @@
+<%= content_for :title do %>
+  index.html.erb
+<% end %>
+
+<h1>index.html.erb</h1>
+
+<%= render partial: "list" %>
+
+<%= content_for :script do %>
+
+<script type="text/javascript">
+
+function hoge() {
+  alert("hoge");
+}
+
+</script>
+
+<% end %>
