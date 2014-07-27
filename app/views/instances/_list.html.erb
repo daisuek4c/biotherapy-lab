@@ -1,1 +1,12 @@
 <h2>_list.html.erb</h2>
+
+<% @db_instances.each do |instance| %>
+
+<p>db_instance_identifier:<%= instance.db_instance_identifier %></p>
+<p>engine:<%= instance.engine %></p>
+<p>backup_retention_period:<%= instance.backup_retention_period %></p>
+<p>multi_az:<%= instance.multi_az %></p>
+<p>port:<%= instance.endpoint.port %></p>
+<p>address:<%= instance.endpoint.address %></p>
+
+<% end %>
